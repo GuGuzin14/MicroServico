@@ -1,0 +1,15 @@
+{
+  "name": "microservicos-pedidos-root",
+  "private": true,
+  "scripts": {
+    "start:clientes": "cd servico-clientes && npm start",
+    "start:produtos": "cd servico-produtos && npm start",
+    "start:pedidos": "cd servico-pedidos && npm start",
+    "start:gateway": "cd servico-gateway && npm start",
+    "start:frontend": "cd frontend-react && npm run dev",
+    "dev": "concurrently -n CLIENTES,PRODUTOS,PEDIDOS,GATEWAY,FRONT -c blue,magenta,cyan,yellow,green \"npm run start:clientes\" \"npm run start:produtos\" \"npm run start:pedidos\" \"npm run start:gateway\" \"npm run start:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
