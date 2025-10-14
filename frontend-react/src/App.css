@@ -1,42 +1,97 @@
-#root {
-  max-width: 1280px;
+/* Layout */
+.container {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  padding: 1.5rem;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
 }
 
 .card {
-  padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
-.read-the-docs {
-  color: #888;
+.row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.divider {
+  height: 1px;
+  background: #eee;
+  margin: 0.75rem 0;
+}
+
+.qty {
+  width: 80px;
+}
+
+/* Elements */
+input,
+select,
+button {
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #d0d7de;
+  font-size: 0.95rem;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: 2px solid #9bbcf7;
+  outline-offset: 1px;
+}
+
+button {
+  background: #0f62fe;
+  color: #fff;
+  border-color: #0f62fe;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0353e9;
+  border-color: #0353e9;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list li {
+  padding: 0.25rem 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.list li span {
+  color: #6a737d;
+  margin-right: 6px;
+}
+
+.order {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.error {
+  color: #b42318;
 }
